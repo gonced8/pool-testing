@@ -116,6 +116,15 @@ heatmap(min_total:total_step:max_total, 0:prob_step:1, matrix',
 println("Plotted")
 savefig("./result.png")
 println("Saved")
+
+#=
+gui()
+scatter(results[:, 2], results[:, 3]./results[:, 1], show=true)
+x = prob_step:prob_step:1
+y = x.^(-0.5)
+plot!(x, y)
+=#
+
 readline()
 
 println("End")
